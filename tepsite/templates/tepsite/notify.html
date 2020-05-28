@@ -1,0 +1,30 @@
+{% extends 'tepsite/base.html' %}
+
+
+{% block body %}
+
+
+
+
+<center> <H1> HOMEPAGE </H1>    </center>
+
+
+
+<h2>{% block title %} Announcements {% endblock %}</h2>
+
+
+
+	{% for announcement in announcements %}
+  		
+  		<div class="alert alert-{{ announcement.level }}">{{ announcement.body|safe }} </div>
+
+	{% endfor %}
+
+{% endblock %}
+
+
+
+
+
+
+

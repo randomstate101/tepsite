@@ -1,0 +1,14 @@
+{% extends 'tepsite/base.html' %}
+ 
+
+{% block body %}
+
+{% block title %} Feedback Form  {% endblock %}
+ 
+
+<form action="{% url 'tepsite:feedbackform' %}" method="POST">
+    {% csrf_token %}
+    {{ tepsite.as_p }}
+    <input type="submit" />
+</form>
+{% endblock %}

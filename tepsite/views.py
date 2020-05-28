@@ -1,12 +1,31 @@
 from django.shortcuts import render
+
+
 from django.http import HttpResponse
 
-def index(Request):
-	return HttpResponse("Homepage")
+
+from .forms import FeedbackForm
 
 
-def details(request,question_id):
-	return HttpResponse("You are currently viewing %s." %question_id)
+
+
+def index(request):
+	return render(request, 'tepsite/notify.html')
+	
+
+
+def feedback_form(request):
+    if request.method == 'POST':
+        form = FeedbackForm(request.POST)
+ 
+        if form.is_valid():
+            form.save()
+            return render(request, 'tepsite/thanks.html')
+    else:
+        form = FeedbackForm()
+    return render(request, 'tepsite/feedback_form.html', {'tepsite':form})
+
+
 
 
 def responses(request,question_id):

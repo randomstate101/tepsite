@@ -6,9 +6,11 @@ from django.urls import path
 #path('posts/<int:post_id>/', post_detail_view)
 from . import views
 
+
+app_name = 'tepsite'
+
 urlpatterns = [
 	path('', views.index, name='index'),
-	path('<int:question_id>/', views.details, name='details'),
 	path('<int:question_id>/responses', views.responses, name='responses'),
-
+	path('feedbackform', views.feedback_form, name='feedbackform')
 ]

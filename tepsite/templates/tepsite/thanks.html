@@ -1,0 +1,11 @@
+{% extends 'tepsite/base.html' %}
+ 
+
+{% block body %}
+
+{% block title %} Thanks! {% endblock %}
+ 
+
+<h1>Thanks for your response.</h1>
+<p><a href="{% url 'tepsite:feedbackform' %}">Response again?</a></p>
+{% endblock %}
