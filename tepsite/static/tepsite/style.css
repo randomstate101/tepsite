@@ -1,0 +1,93 @@
+.navbar {
+  padding: 0rem;
+  margin-bottom: 1rem;
+}
+/*nav{
+  background-color: #16469D;
+}*/
+.tth {
+  background-color: #16469d;
+  padding: 0.5rem;
+}
+.JSWlogo {
+  width: 10em;
+}
+#navbarResponsive {
+  color: black;
+  border-color: black;
+  font-weight: 700;
+}
+
+body {
+  background-color: #ffffff;
+}
+.introduction {
+  color: white;
+  font-weight: 400;
+}
+.line-200,
+.light-100 {
+  border-color: #16469d;
+  border-width: 2px;
+}
+.card-title {
+  color: white;
+}
+.introduction {
+  color: #16469d;
+}
+.card {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-color: black;
+  background-color: #16469d;
+  border-radius: 5px;
+}
+.card-text {
+  color: white;
+}
+.survey {
+  width: 100%;
+  color: #16469d;
+  font-weight: 500;
+  border-color: #16469d;
+}
+.info {
+  background-color: #e7f3fe;
+  border-left: 6px solid #16469d;
+  border-right: 6px solid #16469d;
+}
+footer h2,
+h5 {
+  color: #16469d;
+  font-weight: 500;
+}
+p {
+  color: #16469d;
+  font-weight: 600;
+}
+/*---Media Queries --*/
+@media (max-width: 992px) {
+  .tth {
+    background-color: #16469d;
+    padding-left: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .tth {
+    background-color: #16469d;
+    padding-left: 2rem;
+  }
+  .display-4 {
+    font-size: 200%;
+  }
+}
+@media (max-width: 576px) {
+  .tth {
+    background-color: #16469d;
+    padding-left: 2rem;
+  }
+  .display-4 {
+    font-size: 160%;
+  }
+}
