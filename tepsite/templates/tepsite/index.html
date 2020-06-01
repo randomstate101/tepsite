@@ -80,15 +80,16 @@
               <a class="nav-link" style="color: white;" href="#">Button</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color: white;" href="#">Button</a>
+              <a class="nav-link" style="color: white;" href="{%url 'login'%}">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color: white;" href="#">Log Out</a>
+              <a class="nav-link" style="color: white;" href="{%url 'logout'%}">Log Out</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    {%block content%}
     <div class="container-fluid padding">
       <div class="row welcome text-center">
         <div class="col-12">
@@ -109,8 +110,8 @@
     <div class="info">
       <marquee onmouseover="this.stop();" onmouseout="this.start();">
         {% for announcement in announcements %}
-          <div class="alert alert-{{ announcement.level }}">{{ announcement.body|safe }} 
-        {% endfor %}    
+          <div class="alert alert-{{ announcement.level }}">{{ announcement.body|safe }}
+        {% endfor %}
           </div>
       </marquee>
     </div>
@@ -239,6 +240,7 @@
       </div>
     </div>
     <hr class="line-200" />
+    {%endblock content%}
     <footer>
       <div class="container-fluid padding">
         <div class="row text-center">
