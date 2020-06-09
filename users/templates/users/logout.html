@@ -1,9 +1,17 @@
-{% extends "tepsite/index.html" %}
+{% extends "users/login.html" %}
+{%block link%}
+            <li class="nav-item">
+              <a class="nav-link" style="color: white;" href="{%url 'login'%}">Login</a>
+            </li>
+{%endblock link%}
 {% block content %}
+<div class="login">
     <h2>You have been logged out</h2>
+
     <div class="border-top pt-3">
         <small class="text-muted">
             <a href="{% url 'login' %}">Log In Again</a>
         </small>
+    </div>
     </div>
 {% endblock content %}

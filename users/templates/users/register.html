@@ -1,7 +1,12 @@
-{% extends "tepsite/index.html" %}
+{% extends "users/login.html" %}
 {% load crispy_forms_tags %}
+{%block link%}
+            <li class="nav-item">
+              <a class="nav-link" style="color: white;" href="{%url 'login'%}">Login</a>
+            </li>
+{%endblock link%}
 {% block content %}
-    <div class="content-section">
+    <div class="login">
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
