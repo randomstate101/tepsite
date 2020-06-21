@@ -211,6 +211,32 @@ class Together_win_Peer_Review(models.Model):
     def __str__(self):
         return self.intern_name
 
+class BusinessCommuniction_Self_Assessment(models.Model):
+    intern_name = models.CharField(max_length= 40)
+    email = models.EmailField()
+    gender = models.CharField(max_length=20,blank=True,null=True,choices=GENDER_CHOICES )
+    I_am_very_clear_in_my_mind_about_what_I_want_to_say = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_communicate_while_keeping_in_mind_the_environment_or_the_need_of_the_receiver  = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    The_contents_of_my_message_are_brief_and_clear = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_keep_in_mind_the_need_and_interest_of_the_receiver_before_speaking  = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_try_to_gauge_the_face_of_the_receiver_during_face_to_face_communication_as_an_attempt_to_get_feedback = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_look_at_the_speaker_while_he_or_she_is_talking  = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_listen_to_people_who_say_things_I_disagree_with_or_dont_want_to_hear  = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_ask_for_clarification_if_I_am_unclear_about_what_is_being_said = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_pay_attention_when_not_interested_in_what_the_person_is_saying_or_find_the_topic_too_complex  = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_dont_have_any_doubts_on_any_questions_that_have_already_been_answered_by_the_speaker  = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_listen_to_the_main_ideas_or_the_whole_picture_not_only_the_facts  = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_do_not_use_excess_words_during_writing  = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES ) 
+    I_present_all_the_necessary_facts_while_sending_written_communication = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_use_positive_words_and_phrases_instead_of_negative_ones = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_avoid_vague_expressions_in_my_writing_to_maintain_clarity  = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_avoid_the_use_of_jargon_in_my_writing = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_carefully_proof_read_the_important_contents_of_my_data = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_make_sure_that_the_statement_says_what_I_intend_it_to_say = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+
+    def __str__(self):
+        return self.intern_name
+
 
 
 

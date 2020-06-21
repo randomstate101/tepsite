@@ -27,6 +27,8 @@ urlpatterns = [
 	path('man_effec_employee_engagement/',views.man_effec_employee_engagement,name='man_effec_employee_engagement'),
 	path('together_win_self_assessment/',views.together_win_self_assessment,name='together_win_self_assessment'),
 	path('together_win_peer_review/',views.together_win_peer_review,name='together_win_peer_review'),
+	path('bisscomm_selfassess/',views.bisscomm_selfassess,name='bisscomm_selfassess')
+
 
 
 
