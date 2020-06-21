@@ -18,6 +18,7 @@ from .forms import Man_eff_Employee_Engagement
 from .forms import Together_win_Self_Assessment
 from .forms import Together_win_Peer_Review
 from .forms import BusinessCommuniction_Self_Assessment
+from .forms import Presentation_Self_Assessment
 
 
 
@@ -149,3 +150,15 @@ def bisscomm_selfassess(request):
 	else:
 		form = BusinessCommuniction_Self_Assessment()
 	return render(request,'tepsite/bisscomm_selfassess.html',{'hepsite':form})
+
+
+
+def presentation_self_assessment(request):
+	if request.method == 'POST':
+		form = Presentation_Self_Assessment(request.POST)
+		if form.is_valid():
+			form.save()
+			return render(request,'tepsite/thanks.html')
+	else:
+		form = Presentation_Self_Assessment()
+	return render(request,'tepsite/presentation_self_assessment.html',{'iepsite':form})

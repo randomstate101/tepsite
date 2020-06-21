@@ -226,7 +226,7 @@ class BusinessCommuniction_Self_Assessment(models.Model):
     I_pay_attention_when_not_interested_in_what_the_person_is_saying_or_find_the_topic_too_complex  = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
     I_dont_have_any_doubts_on_any_questions_that_have_already_been_answered_by_the_speaker  = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
     I_listen_to_the_main_ideas_or_the_whole_picture_not_only_the_facts  = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
-    I_do_not_use_excess_words_during_writing  = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES ) 
+    I_do_not_use_excess_words_during_writing  = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
     I_present_all_the_necessary_facts_while_sending_written_communication = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
     I_use_positive_words_and_phrases_instead_of_negative_ones = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
     I_avoid_vague_expressions_in_my_writing_to_maintain_clarity  = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
@@ -236,6 +236,32 @@ class BusinessCommuniction_Self_Assessment(models.Model):
 
     def __str__(self):
         return self.intern_name
+
+class Presentation_Self_Assessment(models.Model):
+    intern_name = models.CharField(max_length= 40)
+    email = models.EmailField()
+    gender = models.CharField(max_length=20,blank=True,null=True,choices=GENDER_CHOICES )
+    Before_preparing_the_content_I_make_sure_that_I_am_clear_about_the_objectives_of_the_session = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_ensure_that_all_equipment_is_functioning_properly_at_the_venue_before_starting_my_presentation = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_make_a_thorough_research_about_the_topic_and_prepare_content_that_is_interesting_and_useful =models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_identify_my_audience_before_I_start_preparing_for_my_presentation = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_consider_immediate_needs_and_pain_points_and_obstacles_of_my_audience_regarding_the_topic_I_will_present=models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_can_gauge_the_level_of_interest_of_my_audience_on_the_topic_being_presented =models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_make_sure_that_the_contents_are_relevant_and_logical_and_meet_the_needs_of_participants=models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_make_sure_that_the_content_or_information_I_am_giving_is_appropriate_to_the_culture_and_sentiments_of_the_audience=models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_am_very_clear_in_the_statements_that_I_use=models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_use_the_appropriate_font_size_so_that_the_on_screen_text_is_readable=models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_ensure_that_the_presentation_has_a_proper_flow_clarity_and_the_right_amount_of_information=models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_use_suitable_pictures_and_charts_and_figures_to_enhance_the_effectiveness_of_the_presentation=models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_use_relevant_stories_and_analogies_and_examples_and_humor_etc_during_the_presentation=models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_maintain_eye_contact_and_try_to_connect_with_the_participants_during_the_presentation=models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_take_care_of_my_voice_modulation_and_tone_and_pitch_and_language_during_the_presentation=models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_make_sure_that_I_give_a_worthwhile_summary_and_make_a_convincing_conclusion = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+
+    def __str__(self):
+        return self.intern_name
+
+
 
 
 

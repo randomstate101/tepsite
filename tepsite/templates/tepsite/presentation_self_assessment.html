@@ -1,0 +1,14 @@
+{% extends 'tepsite/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+
+{% block title %} Peer Review  {% endblock %}
+
+
+<form action="{% url 'tepsite:presentation_self_assessment' %}" method="POST">
+    {% csrf_token %}
+    {{ iepsite|crispy }}
+    <input type="submit" />
+</form>
+{% endblock %}

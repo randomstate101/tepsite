@@ -10,6 +10,7 @@ from .models import Man_eff_Employee_Engagement
 from .models import Together_win_Self_Assessment
 from .models import Together_win_Peer_Review
 from .models import BusinessCommuniction_Self_Assessment
+from .models import Presentation_Self_Assessment
 
 
 class FeedbackForm(forms.ModelForm):
@@ -50,4 +51,8 @@ class Together_win_Peer_Review(forms.ModelForm):
 class BusinessCommuniction_Self_Assessment(forms.ModelForm):
     class Meta:
         model = BusinessCommuniction_Self_Assessment
+        exclude=[]
+class Presentation_Self_Assessment(forms.ModelForm):
+    class Meta:
+        model = Presentation_Self_Assessment
         exclude=[]
