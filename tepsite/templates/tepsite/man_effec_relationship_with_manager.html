@@ -1,0 +1,14 @@
+{% extends 'tepsite/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+
+{% block title %} RM Scale  {% endblock %}
+
+
+<form action="{% url 'tepsite:man_effec_relationship_with_manager' %}" method="POST">
+    {% csrf_token %}
+    {{ aepsite|crispy }}
+    <input type="submit" />
+</form>
+{% endblock %}

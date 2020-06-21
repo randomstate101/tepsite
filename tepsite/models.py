@@ -103,6 +103,27 @@ class Man_eff_SelfEvaluation(models.Model):
     I_identify_when_is_the_best_time_to_tell_vs_ask_in_a_conversation = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
     I_know_the_types_of_questions_to_use_to_dig_deeper_into_a_conversation = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
 
+    def __str__(self):
+        return self.intern_name
+
+class Man_eff_RelationshipWithManager(models.Model):
+
+    intern_name = models.CharField(max_length= 40)
+    email = models.EmailField()
+    gender = models.CharField(max_length=20,blank=True,null=True,choices=GENDER_CHOICES )
+    Name_of_your_Manager = models.CharField(max_length=50)
+    My_manager_understands_my_problems_and_needs =  models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    My_manager_recognizes_my_potential = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    Regardless_of_how_much_power_he_she_has_built_into_his_her_position_my_manager_would_be_personally_inclined_to_use_his_her_power_to_help_me_solve_problems_in_my_work = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    My_supervisor_has_enough_confidence_in_me_that_he_she_would_defend_and_justify_my_decisions_if_I_were_not_present_to_do_so = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_can_count_on_my_manager_to_bail_me_out_at_his_her_expense_when_I_really_need_it = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    My_manager_has_enough_confidence_in_me_that_he_she_would_defend_and_justiy_my_decision_if_I_am_not_present_to_do_so = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_know_how_satisfied_my_manager_is_with_what_I_do = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+
+    def __str__(self):
+        return self.intern_name
+
+
 
 
 

@@ -13,6 +13,7 @@ from .models import Program
 from .forms import STH_Selfevaluation
 from .forms import Six_hats_Writeup
 from .forms import Man_eff_SelfEvaluation
+from .forms import Man_eff_RelationshipWithManager
 
 
 
@@ -90,3 +91,14 @@ def maneffec_selfevaluation(request):
 	else:
 		form = Man_eff_SelfEvaluation()
 	return render(request, 'tepsite/maneffec_selfevaluation.html',{'sepsite':form})
+
+
+def man_effec_relationship_with_manager(request):
+	if request.method == 'POST':
+		form = Man_eff_RelationshipWithManager(request.POST)
+		if form.is_valid():
+			form.save()
+			return render(request,'tepsite/thanks.html')
+	else:
+		form = Man_eff_RelationshipWithManager()
+	return render(request, 'tepsite/man_effec_relationship_with_manager.html',{'aepsite':form})

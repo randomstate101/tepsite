@@ -6,6 +6,7 @@ from .models import ProgramFeedbackForm
 from .models import SixThinkingHats_SelfEvaluation
 from .models import Six_hats_Writeup
 from .models import Man_eff_SelfEvaluation
+from .models import Man_eff_RelationshipWithManager
 
 
 
@@ -30,3 +31,4 @@ admin.site.register(ProgramFeedbackForm)
 admin.site.register (SixThinkingHats_SelfEvaluation)
 admin.site.register(Six_hats_Writeup)
 admin.site.register(Man_eff_SelfEvaluation)
+admin.site.register(Man_eff_RelationshipWithManager)

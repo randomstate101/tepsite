@@ -5,6 +5,7 @@ from .models import ProgramFeedbackForm
 from .models import SixThinkingHats_SelfEvaluation
 from .models import Six_hats_Writeup
 from .models import Man_eff_SelfEvaluation
+from .models import Man_eff_RelationshipWithManager
 
 
 class FeedbackForm(forms.ModelForm):
@@ -25,3 +26,8 @@ class Man_eff_SelfEvaluation(forms.ModelForm):
     class Meta:
         model = Man_eff_SelfEvaluation
         exclude= []
+
+class Man_eff_RelationshipWithManager(forms.ModelForm):
+    class Meta:
+        model = Man_eff_RelationshipWithManager
+        exclude = []
