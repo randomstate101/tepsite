@@ -1,0 +1,14 @@
+{% extends 'tepsite/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+
+{% block title %} Peer Review  {% endblock %}
+
+
+<form action="{% url 'tepsite:together_win_peer_review' %}" method="POST">
+    {% csrf_token %}
+    {{ gepsite|crispy }}
+    <input type="submit" />
+</form>
+{% endblock %}

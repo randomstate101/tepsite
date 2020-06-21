@@ -1,0 +1,14 @@
+{% extends 'tepsite/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+
+{% block title %} Team Work  {% endblock %}
+
+
+<form action="{% url 'tepsite:together_win_self_assessment' %}" method="POST">
+    {% csrf_token %}
+    {{ eepsite|crispy }}
+    <input type="submit" />
+</form>
+{% endblock %}

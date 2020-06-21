@@ -15,6 +15,8 @@ from .forms import Six_hats_Writeup
 from .forms import Man_eff_SelfEvaluation
 from .forms import Man_eff_RelationshipWithManager
 from .forms import Man_eff_Employee_Engagement
+from .forms import Together_win_Self_Assessment
+from .forms import Together_win_Peer_Review
 
 
 
@@ -114,3 +116,24 @@ def man_effec_employee_engagement(request):
 	else:
 		form = Man_eff_Employee_Engagement()
 	return render(request, 'tepsite/man_effec_employee_engagement.html',{'cepsite':form})
+
+def together_win_self_assessment(request):
+	if request.method == 'POST':
+		form = Together_win_Self_Assessment(request.POST)
+		if form.is_valid():
+			form.save()
+			return render(request,'tepsite/thanks.html')
+	else:
+		form = Together_win_Self_Assessment()
+	return render(request,'tepsite/together_win_self_assessment.html',{'eepsite':form})
+
+
+def together_win_peer_review(request):
+	if request.method == 'POST':
+		form = Together_win_Peer_Review(request.POST)
+		if form.is_valid():
+			form.save()
+			return render(request,'tepsite/thanks.html')
+	else:
+		form = Together_win_Peer_Review()
+	return render(request,'tepsite/together_win_peer_review.html',{'gepsite':form})
