@@ -24,6 +24,7 @@ urlpatterns = [
 	path('six_hats_writeup/',views.six_hats_writeup,name='six_hats_writeup'),
 	path('maneffec_selfevaluation/',views.maneffec_selfevaluation,name='maneffec_selfevaluation'),
 	path('man_effec_relationship_with_manager/',views.man_effec_relationship_with_manager,name='man_effec_relationship_with_manager'),
+	path('man_effec_employee_engagement',views.man_effec_employee_engagement,name='man_effec_employee_engagement'),
 
 
 

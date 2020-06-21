@@ -14,6 +14,7 @@ from .forms import STH_Selfevaluation
 from .forms import Six_hats_Writeup
 from .forms import Man_eff_SelfEvaluation
 from .forms import Man_eff_RelationshipWithManager
+from .forms import Man_eff_Employee_Engagement
 
 
 
@@ -102,3 +103,14 @@ def man_effec_relationship_with_manager(request):
 	else:
 		form = Man_eff_RelationshipWithManager()
 	return render(request, 'tepsite/man_effec_relationship_with_manager.html',{'aepsite':form})
+
+
+def man_effec_employee_engagement(request):
+	if request.method == 'POST':
+		form = Man_eff_Employee_Engagement(request.POST)
+		if form.is_valid():
+			form.save()
+			return render(request,'tepsite/thanks.html')
+	else:
+		form = Man_eff_Employee_Engagement()
+	return render(request, 'tepsite/man_effec_employee_engagement.html',{'cepsite':form})

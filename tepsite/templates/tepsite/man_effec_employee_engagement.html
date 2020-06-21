@@ -1,0 +1,14 @@
+{% extends 'tepsite/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+
+{% block title %} Employee Engagement  {% endblock %}
+
+
+<form action="{% url 'tepsite:man_effec_employee_engagement' %}" method="POST">
+    {% csrf_token %}
+    {{ cepsite|crispy }}
+    <input type="submit" />
+</form>
+{% endblock %}

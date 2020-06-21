@@ -124,6 +124,29 @@ class Man_eff_RelationshipWithManager(models.Model):
         return self.intern_name
 
 
+class Man_eff_Employee_Engagement(models.Model):
+
+    intern_name = models.CharField(max_length= 40)
+    email = models.EmailField()
+    gender = models.CharField(max_length=20,blank=True,null=True,choices=GENDER_CHOICES )
+    Name_of_your_Manager = models.CharField(max_length=50)
+    I_know_what_is_expected_of_me_at_work = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_am_willing_to_really_push_myself_to_reach_challenging_work_goals = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_have_the_opportunity_to_do_what_I_do_best_every_day = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    My_supervisor_or_someone_at_work_seems_to_care_about_my_personal_development = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_am_enthusiastic_about_providing_a_high_quality_product_or_service = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_am_always_willing_to_go_the_extra_mile_in_order_to_do_my_job_well = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    Trying_to_constantly_improve_my_job_performance_is_very_important_to_me = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    My_job_is_a_source_of_personal_pride_for_me = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_receive_recognition_or_praise_for_doing_good_work = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    My_opinions_seem_to_count_at_work = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    Someone_has_talked_to_me_about_my_progress_in_the_past_6_months = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+
+    def __str__(self):
+        return self.intern_name
+
+
+
 
 
 
