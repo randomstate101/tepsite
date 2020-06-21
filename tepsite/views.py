@@ -10,6 +10,7 @@ from django.http import HttpResponse
 from .forms import FeedbackForm
 
 from .models import Program
+from .forms import STH_Selfevaluation
 
 
 
@@ -53,3 +54,16 @@ def feedback_form(request):
 def responses(request,question_id):
 	response = "You are looking at the Responses of Question %s."
 	return HttpResponse(response %question_id)
+
+
+
+def sth_selfevaluation(request):
+    if request.method == 'POST':
+        form = STH_Selfevaluation(request.POST)
+
+        if form.is_valid():
+            form.save()
+            return render(request, 'tepsite/thanks.html')
+    else:
+        form = STH_Selfevaluation()
+    return render(request, 'tepsite/six_t_h_selfevaluation.html', {'repsite':form})
