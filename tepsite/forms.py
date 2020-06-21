@@ -1,9 +1,10 @@
 from django import forms
 
 
-from .models import Feedback
+from .models import ProgramFeedbackForm
+
 
 class FeedbackForm(forms.ModelForm):
     class Meta:
-        model = Feedback
+        model = ProgramFeedbackForm
         exclude = []

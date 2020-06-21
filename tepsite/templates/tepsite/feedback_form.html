@@ -1,14 +1,14 @@
 {% extends 'tepsite/base.html' %}
- 
+{% load crispy_forms_tags %}
 
 {% block body %}
 
 {% block title %} Feedback Form  {% endblock %}
- 
+
 
 <form action="{% url 'tepsite:feedbackform' %}" method="POST">
     {% csrf_token %}
-    {{ tepsite.as_p }}
+    {{ tepsite|crispy }}
     <input type="submit" />
 </form>
 {% endblock %}
