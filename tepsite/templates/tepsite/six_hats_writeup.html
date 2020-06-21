@@ -1,0 +1,14 @@
+{% extends 'tepsite/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+
+{% block title %}  WriteUp  {% endblock %}
+
+
+<form action="{% url 'tepsite:six_hats_writeup' %}" method="POST">
+    {% csrf_token %}
+    {{ depsite|crispy }}
+    <input type="submit" />
+</form>
+{% endblock %}

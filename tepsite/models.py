@@ -80,6 +80,16 @@ class SixThinkingHats_SelfEvaluation(models.Model):
      def __str__(self):
          return self.intern_name
 
+class Six_hats_Writeup(models.Model):
+    intern_name = models.CharField(max_length=40)
+    email=models.EmailField()
+    Write_a_brief_write_up_about_how_you_effectively_used_Six_Thinking_Hats_technique_to_solve_a_problem_at_the_workplace = models.TextField()
+
+    def __str__(self):
+        return self.intern_name
+
+
+
 
 
 

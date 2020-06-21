@@ -11,6 +11,7 @@ from .forms import FeedbackForm
 
 from .models import Program
 from .forms import STH_Selfevaluation
+from .forms import Six_hats_Writeup
 
 
 
@@ -67,3 +68,13 @@ def sth_selfevaluation(request):
     else:
         form = STH_Selfevaluation()
     return render(request, 'tepsite/six_t_h_selfevaluation.html', {'repsite':form})
+
+def six_hats_writeup(request):
+	if request.method == 'POST':
+		form = Six_hats_Writeup(request.POST)
+		if form.is_valid():
+			form.save()
+			return render(request, 'tepsite/thanks.html')
+	else:
+		form = Six_hats_Writeup()
+	return render(request,'tepsite/six_hats_writeup.html',{'depsite':form})

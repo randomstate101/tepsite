@@ -20,7 +20,8 @@ urlpatterns = [
 	path('presentation_excellence/', views.pres_exc, name='presentation_excellence'),
 	path('six_hats/', views.six_hats, name='six_hats'),
     path('feedbackform/', views.feedback_form, name='feedbackform'),
-    path('six_hats_selfevaluation/', views.sth_selfevaluation,name='sthselfevaluation')
+    path('six_hats_selfevaluation/', views.sth_selfevaluation,name='sthselfevaluation'),
+	path('six_hats_writeup/',views.six_hats_writeup,name='six_hats_writeup'),
 
 
 
