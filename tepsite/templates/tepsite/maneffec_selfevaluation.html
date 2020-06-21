@@ -1,0 +1,14 @@
+{% extends 'tepsite/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+
+{% block title %}  WriteUp  {% endblock %}
+
+
+<form action="{% url 'tepsite:maneffec_selfevaluation' %}" method="POST">
+    {% csrf_token %}
+    {{ sepsite|crispy }}
+    <input type="submit" />
+</form>
+{% endblock %}

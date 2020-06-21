@@ -22,6 +22,7 @@ urlpatterns = [
     path('feedbackform/', views.feedback_form, name='feedbackform'),
     path('six_hats_selfevaluation/', views.sth_selfevaluation,name='sthselfevaluation'),
 	path('six_hats_writeup/',views.six_hats_writeup,name='six_hats_writeup'),
+	path('maneffec_selfevaluation/',views.maneffec_selfevaluation,name='maneffec_selfevaluation'),
 
 
 

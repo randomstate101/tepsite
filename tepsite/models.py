@@ -80,6 +80,9 @@ class SixThinkingHats_SelfEvaluation(models.Model):
      def __str__(self):
          return self.intern_name
 
+
+
+
 class Six_hats_Writeup(models.Model):
     intern_name = models.CharField(max_length=40)
     email=models.EmailField()
@@ -87,6 +90,20 @@ class Six_hats_Writeup(models.Model):
 
     def __str__(self):
         return self.intern_name
+
+
+class Man_eff_SelfEvaluation(models.Model):
+    intern_name = models.CharField(max_length= 40)
+    email = models.EmailField()
+    I_identify_what_and_when_to_delegate_a_task_or_role_that_will_be_motivating_for_your_employees = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_give_constructive_behavior_based_feedback = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_practise_active_listening = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_assess_conflict_situations_and_apply_the_most_appropriate_modes = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_practice_overall_team_management_and_effective_leadership_skills = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_identify_when_is_the_best_time_to_tell_vs_ask_in_a_conversation = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+    I_know_the_types_of_questions_to_use_to_dig_deeper_into_a_conversation = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
+
+
 
 
 
