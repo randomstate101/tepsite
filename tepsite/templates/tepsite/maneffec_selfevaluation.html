@@ -1,14 +1,6 @@
-{% extends 'tepsite/base.html' %}
+{% extends 'tepsite/base_survey.html' %}
 {% load crispy_forms_tags %}
-
-{% block body %}
-
-{% block title %} Self Assessment Questionnaire  {% endblock %}
-
-
-<form action="{% url 'tepsite:maneffec_selfevaluation' %}" method="POST">
-    {% csrf_token %}
-    {{ sepsite|crispy }}
-    <input type="submit" />
-</form>
-{% endblock %}
+{% block title %}Self Assessment {% endblock %}
+{%block url%}<form action="{% url 'tepsite:maneffec_selfevaluation' %}" method="POST">{%endblock %}
+{%block legend%} Self Assessment{%endblock %}
+{%block form%}{{ sepsite|crispy }}{%endblock %}

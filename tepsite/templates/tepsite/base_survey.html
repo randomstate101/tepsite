@@ -1,17 +1,17 @@
 {% extends 'tepsite/base.html' %}
 {% load crispy_forms_tags %}
-{% block title %} Team Work  {% endblock %}
+{% block title %}   {% endblock %}
 
 {% block body %}
 
 
 
 <div class="questionairee">
-<form action="{% url 'tepsite:together_win_self_assessment' %}" method="POST">
+{%block url%}<form action="{% url 'tepsite:together_win_self_assessment' %}"method="POST">{%endblock %}
   {% csrf_token %}
   <fieldset class="form-group">
-      <legend class="center">Team Work</legend>
-      {{ eepsite|crispy }}
+    <legend class="center">{%block legend%} Team Work{%endblock%}</legend>
+    {%block form%}{{ eepsite|crispy }}{%endblock %}
   </fieldset>
   <div class="form-group">
       <button class="btn btn-primary btn-lg btn-block"" type="submit">Submit </button>
