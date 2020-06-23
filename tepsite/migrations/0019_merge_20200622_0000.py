@@ -6,7 +6,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('tepsite', '0008_auto_20200612_0301'),
+        
         ('tepsite', '0018_presentation_self_assessment'),
     ]
 
