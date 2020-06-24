@@ -117,7 +117,7 @@
     <div class="info">
       <marquee onmouseover="this.stop();" onmouseout="this.start();">
         {% for announcement in announcements %}
-          <div class="alert alert-{{ announcement.level }}">{{ announcement.body|safe }}
+          <div class="alert alert-{{ announcement.level }}"> {{ announcement.body|safe }}
         {% endfor %}
           </div>
       </marquee>
@@ -152,7 +152,7 @@
               <p class="card-text">
                 This is a program about team management which makes the
                 employees works efficiently. Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Nesciunt, veritatis.
+                consectetur adipisicing elit.veritatis.
               </p>
               <a
                 href="together_we_win"
