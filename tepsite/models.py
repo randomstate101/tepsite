@@ -32,7 +32,7 @@ ANSWER_CHOICES=(
 
 
 class ProgramFeedbackForm(models.Model):
-    intern_name = models.CharField(max_length=30,blank=True,null=True)
+    Employee_name = models.CharField(max_length=30,blank=True,null=True)
 
     date_posted = models.DateTimeField(default=timezone.now)
     program = models.ForeignKey(Program,blank=True,null=True, on_delete= models.CASCADE)
@@ -80,7 +80,7 @@ class SixThinkingHats_SelfEvaluation(models.Model):
      def __str__(self):
          return self.intern_name
      class Meta:
-         verbose_name = "[Six Hats] Self Evaluation Form"    
+         verbose_name = "[Six Hats] Self Evaluation Form"
 
 
 
@@ -95,11 +95,11 @@ class Six_hats_Writeup(models.Model):
         return self.intern_name
 
     class Meta:
-         verbose_name = "[Six Hats] Writeup"    
+         verbose_name = "[Six Hats] Writeup"
 
 
 class Man_eff_SelfEvaluation(models.Model):
-    intern_name = models.CharField(max_length= 40)
+    Employee_name = models.CharField(max_length= 40)
     email = models.EmailField()
     I_identify_what_and_when_to_delegate_a_task_or_role_that_will_be_motivating_for_your_employees = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
     I_give_constructive_behavior_based_feedback = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
@@ -112,7 +112,7 @@ class Man_eff_SelfEvaluation(models.Model):
     def __str__(self):
         return self.intern_name
     class Meta:
-         verbose_name = "[Managerial Effectiveness] Self Evaluation Form"    
+         verbose_name = "[Managerial Effectiveness] Self Evaluation Form"
 
 class Man_eff_RelationshipWithManager(models.Model):
 
@@ -154,7 +154,7 @@ class Man_eff_Employee_Engagement(models.Model):
     def __str__(self):
         return self.intern_name
     class Meta:
-         verbose_name = "[Managerial Effectiveness] Employee Engagement Form"    
+         verbose_name = "[Managerial Effectiveness] Employee Engagement Form"
 
 class Together_win_Self_Assessment(models.Model):
     intern_name = models.CharField(max_length= 40)
@@ -200,7 +200,7 @@ class Together_win_Self_Assessment(models.Model):
         return self.intern_name
 
     class Meta:
-         verbose_name = "[Together WE WIN] Self Assessment Form" 
+         verbose_name = "[Together WE WIN] Self Assessment Form"
 
 
 
@@ -224,7 +224,7 @@ class Together_win_Peer_Review(models.Model):
     def __str__(self):
         return self.intern_name
     class Meta:
-         verbose_name = "[Together WE WIN] Peer Review Form" 
+         verbose_name = "[Together WE WIN] Peer Review Form"
 
 class BusinessCommuniction_Self_Assessment(models.Model):
     intern_name = models.CharField(max_length= 40)
@@ -252,7 +252,7 @@ class BusinessCommuniction_Self_Assessment(models.Model):
     def __str__(self):
         return self.intern_name
     class Meta:
-         verbose_name = "[Business Communication] Self Assessment Form"     
+         verbose_name = "[Business Communication] Self Assessment Form"
 
 
 class Presentation_Self_Assessment(models.Model):
@@ -280,7 +280,7 @@ class Presentation_Self_Assessment(models.Model):
         return self.intern_name
 
     class Meta:
-         verbose_name = "[Presentation Self Assessment] Self Assessment Form"  
+         verbose_name = "[Presentation Self Assessment] Self Assessment Form"
 
 
 
