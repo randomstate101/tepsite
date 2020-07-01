@@ -8,7 +8,7 @@
 
 <div class="questionairee">
 {%block url%}<form action="{% url 'tepsite:together_win_self_assessment' %}"method="POST">{%endblock %}
-  {% csrf_token %}
+    {% csrf_token %}
   <fieldset class="form-group">
     <legend class="center">{%block legend%} Team Work{%endblock%}</legend>
     {%block form%}{{ eepsite|crispy }}{%endblock %}

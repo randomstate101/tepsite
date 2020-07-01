@@ -1,6 +1,6 @@
 {% extends 'tepsite/base_survey.html' %}
 {% load crispy_forms_tags %}
 {% block title %}Feedback Form  {% endblock %}
-{%block url%}<form action="{% url 'tepsite:feedbackform' %}" method="POST">{%endblock %}
+{%block url%}<form action="{% url 'tepsite:feedbackform' %}" method="POST"> {% csrf_token %} {%endblock %}
 {%block legend%} Feedback Form {%endblock %}
 {%block form%}{{ tepsite|crispy }}{%endblock %}

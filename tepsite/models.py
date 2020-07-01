@@ -32,7 +32,7 @@ ANSWER_CHOICES=(
 
 
 class ProgramFeedbackForm(models.Model):
-    intern_name = models.CharField(max_length=30,blank=True,null=True)
+    intern_name = models.CharField(max_length=30)
 
     date_posted = models.DateTimeField(default=timezone.now)
     program = models.ForeignKey(Program,blank=True,null=True, on_delete= models.CASCADE)
