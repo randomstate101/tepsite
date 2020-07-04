@@ -79,12 +79,20 @@
             <li class="nav-item">
               <a class="nav-link" style="color: white;" href="#">Button</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" style="color: white;" href="{%url 'register'%}">Register</a>
-            </li>
+
+            {%if user.is_authenticated%}
             <li class="nav-item">
               <a class="nav-link" style="color: white;" href="{%url 'logout'%}">Log Out</a>
             </li>
+              {%else%}
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="{%url 'register'%}">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="{%url 'login'%}">Log In</a>
+              </li>
+              {%endif%}
+
           </ul>
         </div>
       </div>
@@ -151,7 +159,7 @@
               <h4 class="card-title">Together We Win</h4>
               <p class="card-text">
                 This is a program about team management which makes the
-                employees works efficiently. 
+                employees works efficiently.
               </p>
               <br>
               <a
@@ -170,7 +178,7 @@
               <h4 class="card-title">Time Management</h4>
               <p class="card-text">
                 This is a very effective program for team leaders to effectively
-                manage their teams and produce better result. 
+                manage their teams and produce better result.
 
               </p>
               <br>
