@@ -34,7 +34,7 @@ ANSWER_CHOICES=(
 class ProgramFeedbackForm(models.Model):
 
 
-    Employee_name = models.CharField(max_length=30,blank=True,null=True)
+    intern_name = models.CharField(max_length=30,blank=True,null=True)
 
 
     date_posted = models.DateTimeField(default=timezone.now)
@@ -102,7 +102,7 @@ class Six_hats_Writeup(models.Model):
 
 
 class Man_eff_SelfEvaluation(models.Model):
-    Employee_name = models.CharField(max_length= 40)
+    intern_name = models.CharField(max_length= 40)
     email = models.EmailField()
     I_identify_what_and_when_to_delegate_a_task_or_role_that_will_be_motivating_for_your_employees = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
     I_give_constructive_behavior_based_feedback = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
@@ -119,7 +119,7 @@ class Man_eff_SelfEvaluation(models.Model):
 
 class Man_eff_RelationshipWithManager(models.Model):
 
-    Employee_name= models.CharField(max_length= 40)
+    intern_name= models.CharField(max_length= 40)
     email = models.EmailField()
     gender = models.CharField(max_length=20,blank=True,null=True,choices=GENDER_CHOICES )
     Name_of_your_Manager = models.CharField(max_length=50)
@@ -138,7 +138,7 @@ class Man_eff_RelationshipWithManager(models.Model):
 
 class Man_eff_Employee_Engagement(models.Model):
 
-    Employee_name = models.CharField(max_length= 40)
+    intern_name = models.CharField(max_length= 40)
     email = models.EmailField()
     gender = models.CharField(max_length=20,blank=True,null=True,choices=GENDER_CHOICES )
     Name_of_your_Manager = models.CharField(max_length=50)
@@ -160,7 +160,7 @@ class Man_eff_Employee_Engagement(models.Model):
          verbose_name = "[Managerial Effectiveness] Employee Engagement Form"
 
 class Together_win_Self_Assessment(models.Model):
-    Employee_name = models.CharField(max_length= 40)
+    intern_name = models.CharField(max_length= 40)
     email = models.EmailField()
     gender = models.CharField(max_length=20,blank=True,null=True,choices=GENDER_CHOICES )
     My_team_has_a_meaningful_and_shared_purpose= models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
@@ -210,7 +210,7 @@ class Together_win_Self_Assessment(models.Model):
 
 
 class Together_win_Peer_Review(models.Model):
-    Employee_name = models.CharField(max_length= 40)
+    intern_name = models.CharField(max_length= 40)
     email = models.EmailField()
     gender = models.CharField(max_length=20,blank=True,null=True,choices=GENDER_CHOICES )
     Name_of_your_Teammate = models.CharField(max_length=100)
@@ -230,7 +230,7 @@ class Together_win_Peer_Review(models.Model):
          verbose_name = "[Together WE WIN] Peer Review Form"
 
 class BusinessCommuniction_Self_Assessment(models.Model):
-    Employee_name = models.CharField(max_length= 40)
+    intern_name = models.CharField(max_length= 40)
     email = models.EmailField()
     gender = models.CharField(max_length=20,blank=True,null=True,choices=GENDER_CHOICES )
     I_am_very_clear_in_my_mind_about_what_I_want_to_say = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
@@ -259,7 +259,7 @@ class BusinessCommuniction_Self_Assessment(models.Model):
 
 
 class Presentation_Self_Assessment(models.Model):
-    Employee_name = models.CharField(max_length= 40)
+    intern_name = models.CharField(max_length= 40)
     email = models.EmailField()
     gender = models.CharField(max_length=20,blank=True,null=True,choices=GENDER_CHOICES )
     Before_preparing_the_content_I_make_sure_that_I_am_clear_about_the_objectives_of_the_session = models.CharField(max_length=25,blank=True,null=True,choices=ANSWER_CHOICES )
