@@ -42,4 +42,4 @@ admin.site.register(Together_win_Self_Assessment)
 admin.site.register(Together_win_Peer_Review)
 admin.site.register(BusinessCommuniction_Self_Assessment)
 admin.site.register(Presentation_Self_Assessment)
-admin.site.site_header = 'JSW administration'
+admin.site.site_header = 'JSW Steel administration'
